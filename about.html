@@ -1,40 +1,102 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
   <meta charset="UTF-8">
-  <title>Diagram</title>
+  <title>Swipe Diagrams</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
-      padding: 10px;
       font-family: Arial, sans-serif;
+      overflow: hidden;
     }
 
-    .diagram {
+    .container {
       width: 100%;
-      overflow-x: auto;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f4f6f8;
     }
 
-    .diagram object {
+    object {
       width: 100%;
-      height: auto;
-      min-height: 70vh;
+      height: 90vh;
+    }
+
+    .nav {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .left { left: 10px; }
+    .right { right: 10px; }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none; /* mobile me buttons hide */
+      }
     }
   </style>
 </head>
 <body>
 
-<h2>Inheritance Diagram</h2>
+<button class="nav left" onclick="prev()">❮</button>
+<button class="nav right" onclick="next()">❯</button>
 
-<div class="diagram">
-  <object 
-    data="Inheritance.svg" 
-    type="image/svg+xml">
-  </object>
+<div class="container" id="viewer">
+  <object id="diagram" type="image/svg+xml" data="Inheritance.svg"></object>
 </div>
+
+<script>
+  const diagrams = [
+    "Inheritance.svg",
+    "Inheritance.svg",
+    "Inheritance.svg"
+  ];
+
+  let index = 0;
+  const diagram = document.getElementById("diagram");
+
+  function show(i) {
+    diagram.data = diagrams[i];
+  }
+
+  function next() {
+    index = (index + 1) % diagrams.length;
+    show(index);
+  }
+
+  function prev() {
+    index = (index - 1 + diagrams.length) % diagrams.length;
+    show(index);
+  }
+
+  // 👉 Touch swipe support (mobile)
+  let startX = 0;
+
+  document.getElementById("viewer").addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+  document.getElementById("viewer").addEventListener("touchend", e => {
+    let endX = e.changedTouches[0].clientX;
+    let diff = startX - endX;
+
+    if (diff > 50) next();     // swipe left
+    if (diff < -50) prev();    // swipe right
+  });
+</script>
 
 </body>
 </html>
+
