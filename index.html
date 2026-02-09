@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Interface Rules</title>
+   <link rel="stylesheet" href="rc.css">
+   <a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+
+</head>
+<body>
+
+<h1>Java Interface – सभी नियम</h1>
+
+<ul>
+    <li><b>1.</b> Interface बनाने के लिए <code>interface</code> keyword का उपयोग होता है।</li>
+
+    <li><b>2.</b> Interface में methods by default <b>public</b> और <b>abstract</b> होते हैं।</li>
+
+    <li><b>3.</b> Interface में method का body नहीं होता (Java 7 तक)।</li>
+
+    <li><b>4.</b> Java 8 से <b>default methods</b> allowed हैं।</li>
+
+    <li><b>5.</b> Java 8 से <b>static methods</b> भी allowed हैं।</li>
+
+    <li><b>6.</b> Interface के variables by default
+        <b>public static final</b> होते हैं।</li>
+
+    <li><b>7.</b> Interface का object नहीं बनाया जा सकता।</li>
+
+    <li><b>8.</b> Class interface को <code>implements</code> keyword से implement करती है।</li>
+
+    <li><b>9.</b> Implement करने वाली class को interface के सभी methods override करने पड़ते हैं।</li>
+
+    <li><b>10.</b> एक class एक से ज्यादा interfaces implement कर सकती है
+        (Multiple Inheritance support)।</li>
+
+    <li><b>11.</b> Interface, दूसरे interface को <code>extends</code> कर सकता है।</li>
+
+    <li><b>12.</b> Interface में constructor नहीं होता।</li>
+
+    <li><b>13.</b> Interface में <code>main()</code> method हो सकता है।</li>
+
+    <li><b>14.</b> Java 9 से interface में <b>private methods</b> allowed हैं।</li>
+
+    <li><b>15.</b> Interface reference का उपयोग करना best practice माना जाता है।</li>
+</ul>
+
+<h2>निष्कर्ष</h2>
+<p>
+    Interface का उपयोग abstraction, loose coupling और
+    multiple inheritance के लिए किया जाता है।
+</p>
+<iframe frameborder="10"  style="width:100%;height:1024px;" src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&layers=1&nav=1&transparent=1&dark=auto#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Page-1%22%20id%3D%22DdtZv7IavPd6YjLou5z2%22%3E7VzZcpswFP0aZpIHdwDVSx8T0qZ96DQdP3R56cggQA1IVMix3a%2BvBMI2XuMWCFBlMixH271XOuIko7kGcOLlPYNJ%2BJF6KDJs01sa4M6w7fFkLK4SWOWAZU2GORIw7ClsA0zxb6RAU6Fz7KG0VJFTGnGclEGXEoJcXsIgY3RRrubTqDxqAgO0B0xdGO2jX7DHwxyd2OMN%2Fh7hICxGtkZv8pIYFpWVJ2kIPbrYgsBbAziMUp4%2FxUsHRTJ4RVzydu%2BOlK4NY4jw5zS4f%2FgN0ON36H4in7%2F9%2BDB6%2BHr3ZXCgFwWlfFXEgKOlKLtdhJijaQJdCS%2FEdAss5HEk3izx6FPC1fxZE%2FEewRmKbqH7GDA6J55DI8pEGaEErUsp8xDbKcmHf4LRXA1v2KNIju%2Fhp5Jdo19zGbvbBHoeJoEBbkSxmSx3rra4yl6L6uIpUPeT3bq5WbJTFsyuRHAd2ae6XWc9mNLpgQ9jHK3yqg4lKY1gmhdnIRukecxkccLQSWOSg6bEkAWYiB7Mk43F3Ce7GI12kQjvIsI%2BciYEYOyb5nCopnmwUEv%2BZpbx6YBNwuVHSa2Nafkol49sZj9HHDcxCRHDHBIXlSNxaDgB73u%2Fj8zYXzasJZDzWYTd2uNYwQCXeuYKmqQdcOwE%2FeXOOPCQSxnkmJLBTiNbhGO7mWVPrg%2Fa%2BR4jBpkbYvHh%2BfFha0nXaPyhWI27wKCT832mm0s2ZBjLLxyZpcnfvZ%2BJY1M06%2B8GknLBul569kSFaqvbrxhicjXlTGqn4a0xvKvG1xEECBwmlZAxNW%2F413oXa3AXa62BjlX7Wqazn1b9Ww%2BoiJSXbkAELWp3zrGurs%2BvMU25bhnYVba9iovlWAXfgD%2F2h%2F6R%2BL%2FLfk2f0VjcHvL%2FvWgWaBa0gAVpSBcvRATnnG9atvWcPY7dhGyzKxjhf5ZttpZt%2FaFc19mmZVuHFlnrDewsC6Rss19Itp3zTcu2nrPHAU3INlAvhXov24CWbf2hXNfZpmVbhxZZ6w3sLAukbAMvJNvO%2BaZJkHc7vmtHoKqyo1Wn25o5A1Zs%2BtUdDej9qm9eBDdz5kXKDr0O%2BiMBpquUo%2FhVRQvHNYv1qqreYA7l6blnr2I6Pycu%2F1UzJAwTHpGrCoaxoWn6x%2BRCgaw3T7VXmzHiIfVKTWr0V%2F%2FRqpXK%2F6NUqjq4dql3aMkR8bQSayGre6rEioMmeiloMabF2HPFmBNi4etGi2VnprQOaxULtA6r8%2BPUkA6r6CSa1mG9YXWPdZitdZjWYUenSeuwrW6O6TC7VFvrsBawQOuwOj9ODemwio6WaR3WG1b3WIcBrcO0Djs6TVqHbXVzTIeBUm2tw1rAgo7rMAHuJ1Hby7NmHMi9VnkyN4Fl2epOo1n6PMQ4UkkYrXWywXh5j2iMOFuJKuFW2sI3r1WSwsUmx%2BFwqDDVzUi9rsqvUCVYDNY9b3IQigeVhrB43aQ7zMruN0kjwds%2F%3C%2Fdiagram%3E%3Cdiagram%20id%3D%22dkVr_6av6kfmWf3eeEwB%22%20name%3D%22Page-2%22%3EjZNLc5swEMc%2FDcd0eMSxfSyO7R7ayYHJ5NhR0Ro0FlpGrAPOp48Ey2vSzpQDSL9drfbxJ0gOVXe2oi5%2FoQQdxKHsguQ5iOPtbuveHtwHEEW7zUAKqySzGWTqAxiGTG9KQrNyJERNql7DHI2BnFZMWIvt2u2Cen1rLQr4ArJc6K%2F0TUkqB7qLtzP%2FAaoox5ujp%2F1gqcTozJU0pZDYLlByDJKDRaRhVXUH0L55Y1%2BGc6d%2FWKfELBj6nwP3XbfPHrvu7Vydf9f08zVX%2BuEvURg1dB974DKv%2FdIguU%2Faloogq0XuWevG7lhJlXa7yC3%2FiPxaWLwZ%2BXIjrQwwv6ChA2q0fdAk7B%2FHpbDXFxdNkddI%2BC3ceGel9cL5dDrtU9extCGLVxgtBn303jnjdBvUvuBUKuvkoND4HKFxtaWFFVK5Mp8XJoPWj2myre%2BMv%2FvEp8H1m0Ghsc%2B8RmUI7PHdHWzYPjTvXegbN0%2FmF2ZgCbpFj3lMZ8AKyN6dS7lU0hPrpp1lFz0y4zCTtvjv2ox7waovptizMNyCtTFuZw32tsWfnBw%2FAQ%3D%3D%3C%2Fdiagram%3E%3Cdiagram%20id%3D%22ttXm_ZHcT55MdoZgPtkF%22%20name%3D%22Page-3%22%3EjZLBboMwEES%2FhmMkwAmQa0lCqgr1QKWcLViwJYORcQr062vqJYDSSr2gnbfjtRnbIXE9JIq2LJUFCMd3i8EhJ8f3wyg03wmMFnhedLCkUrxAtoCMfwFCF%2BmdF9BtjFpKoXm7hblsGsj1hlGlZL%2B1lVJsd21pBU8gy6l4pjdeaGZp5IcLvwKv2LyzFxxtp6azGf%2BkY7SQ%2FQqRs0NiJaW2VT3EIKbw5lzsussf3cfBFDT6PwvK6ro%2FJfFr8Oa979Tto0zddPfLFESdHucMesY1ZC3NJ92be3bIC9O1MMozpfV%2FUnFHf4kElIZhNRTPlYCsQavRWNgqugBz6peYvTk7nOLvUeNrOhxRU7zl6jF6CcIUmMUsl8x%2FequXS87f%3C%2Fdiagram%3E%3Cdiagram%20id%3D%2244YvrlQ_jE79lwxxp6Z6%22%20name%3D%22Page-4%22%3EjZJNb4MwDIZ%2FTY6VmmRr6XWsH5u0aRKHHacUDImUEBTSAfv1g8UUUDdpF2Q%2FfmOH1yE8Nu3RiUq%2B2Aw0YeusJfyRMLaNtv13AF0AlEb3gRROZcgmkKgvQLhGelEZ1Auht1Z7VS1hassSUr9gwjnbLGW51cuplSjgBiSp0Lf0XWVeBhqx7cRPoAo5TqabXagYMYrxT2opMtvMEN8THjtrfYhMG4MezBt9CecOf1SvF3NQ%2Bv8cSD%2Fay8qdKH09tOzp9Px2TterX7ogqn03etBI5SGpRDrkTb9nwh%2BkN7rPaB8G%2FafQF9TnOWEbYQZZea6rSQLOQzubghc9gjXgXddL5MzLDRrXTL7T0UzswnaY4%2FO645gLXHtxbT050wdozphOS%2FipzZ4y338D%3C%2Fdiagram%3E%3C%2Fmxfile%3E" allowtransparency="true"></iframe>
+
+
+</body>
+</html>
